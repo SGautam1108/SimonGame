@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simon</title>
 
-<head>
-  <meta charset="utf-8">
-  <title>Simon</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+            rel="stylesheet"
+        />
 
-<body>
-  <h1 id="level-title">Press A Key to Start</h1>
-  <div class="container">
-    <div lass="row">
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css" />
 
-      <div type="button" id="green" class="btn green">
+        <!-- Jquery and JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="index.js"></script>
+    </head>
 
-      </div>
+    <body>
+        <header>
+            <h1 id="level-title">Press 'S' Key to Start</h1>
+        </header>
 
-      <div type="button" id="red" class="btn red">
-
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-</body>
-
+        <main>
+          <div class="container">
+              <button id="green" class="btn green" aria-disabled="true"></button>
+              <button id="red" class="btn red" aria-disabled="true"></button>
+          
+              <button id="yellow" class="btn yellow" aria-disabled="true"></button>
+              <button id="blue" class="btn blue" aria-disabled="true"></button>
+          </div>
+        </main>
+    </body>
 </html>

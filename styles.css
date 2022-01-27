@@ -11,15 +11,17 @@ body {
 }
 
 .container {
-  display: block;
-  width: 50%;
-  margin: auto;
-
+  display: grid;
+  place-items: center;
+  place-content: center;
+  grid-template-rows: repeat(2, minmax(auto, 1fr));
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  max-width: 30em;
+  margin-inline: auto;
 }
 
 .btn {
   margin: 25px;
-  display: inline-block;
   height: 200px;
   width: 200px;
   border: 10px solid black;
@@ -50,4 +52,10 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.btn[aria-disabled = "true"]{
+  pointer-events: none;
+  border-color: grey;
+  background: linear-gradient(to bottom right, rgba(31, 30, 30, 0.815), rgba(46, 42, 42, 0.856));
 }
